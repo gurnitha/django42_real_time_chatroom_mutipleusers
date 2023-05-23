@@ -379,3 +379,48 @@ Project: F:\_ingafter65\CHATROOM
         Successfully created tables
 
         modified:   README.md
+
+
+#### 5.2 DJANGO ADMIN - Using dbshell to check the results
+
+
+        (venv3942) hp@ING:~ python manage.py dbshell
+        psql (13.0, server 15.1)
+        WARNING: psql major version 13, server major version 15.
+                 Some psql features might not work.
+        WARNING: Console code page (437) differs from Windows code page (1252)
+                 8-bit characters might not work correctly. See psql reference
+                 page "Notes for Windows users" for details.
+        Type "help" for help.
+
+        django42_real_time_chatroom_mutipleusers=# \dt
+                          List of relations
+         Schema |            Name            | Type  | Owner
+        --------+----------------------------+-------+--------
+         public | auth_group                 | table | django
+         public | auth_group_permissions     | table | django
+         public | auth_permission            | table | django
+         public | auth_user                  | table | django
+         public | auth_user_groups           | table | django
+         public | auth_user_user_permissions | table | django
+         public | django_admin_log           | table | django
+         public | django_content_type        | table | django
+         public | django_migrations          | table | django
+         public | django_session             | table | django
+        (10 rows)
+
+
+        django42_real_time_chatroom_mutipleusers=# \dt auth_user
+                  List of relations
+         Schema |   Name    | Type  | Owner
+        --------+-----------+-------+--------
+         public | auth_user | table | django
+        (1 row)
+
+
+        django42_real_time_chatroom_mutipleusers=# SELECT * FROM auth_user;
+         id | password | last_login | is_superuser | username | first_name | last_name | email | is_staff | is_active | date_joined
+        ----+----------+------------+--------------+----------+------------+-----------+-------+----------+-----------+-------------
+        (0 rows)
+
+        modified:   README.md
