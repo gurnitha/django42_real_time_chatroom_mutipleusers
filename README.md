@@ -144,3 +144,49 @@ Project: F:\_ingafter65\CHATROOM
 #### 4.1 DATABASE - Install postgresql
 
         PASS
+
+
+#### 4.2 DATABASE - Create postgresql db
+
+        1. Check if PostgreSQL server is running
+
+        1.1 Open Task Manager > Services
+        > find postgresql ..
+
+        Note:
+
+        In this case I found PostgreSQL server is running
+
+        2. Open any terminal (in this case Windows CMD)
+
+        Microsoft Windows [Version 10.0.19045.2965]
+        (c) Microsoft Corporation. All rights reserved.
+
+        C:\Users\hp>psql postgres postgres
+        Password for user postgres:
+        psql (13.0, server 15.1)
+        WARNING: psql major version 13, server major version 15.
+                 Some psql features might not work.
+        WARNING: Console code page (437) differs from Windows code page (1252)
+                 8-bit characters might not work correctly. See psql reference
+                 page "Notes for Windows users" for details.
+        Type "help" for help.
+
+        postgres=# 
+
+        3. Show all databases in the postgres db
+
+        postgres=# \l
+
+        4. Create a new db
+
+        postgres=# CREATE DATABASE django42_real_time_chatroom_mutipleusers;
+        CREATE DATABASE
+
+        5. Check if django42_real_time_chatroom_mutipleusers has been created
+
+        postgres=# \l
+
+        modified:   README.md
+
+
