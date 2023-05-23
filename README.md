@@ -510,3 +510,17 @@ Project: F:\_ingafter65\CHATROOM
 
 
 ## 7. DJANGO APP
+
+
+## 7.1 DJANGO APP - Create django app 'app/personal'
+
+        modified:   README.md
+        new file:   app/personal/__init__.py
+        new file:   app/personal/admin.py
+        new file:   app/personal/apps.py
+        new file:   app/personal/migrations/__init__.py
+        new file:   app/personal/models.py
+        new file:   app/personal/tests.py
+        new file:   app/personal/views.py
+
+        modified:   README.md
