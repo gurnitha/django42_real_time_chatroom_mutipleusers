@@ -46,3 +46,4 @@ Project: F:\_ingafter65\CHATROOM
         modified:   README.md
 
 
+## 3. CREATE DJANGO PROJECT
