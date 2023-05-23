@@ -480,4 +480,30 @@ Project: F:\_ingafter65\CHATROOM
         modified:   README.md
 
 
+#### 6.2 REDIS - Configure Redis on settings.py
+        
+        1. Setup redis in settings.py
 
+        # REDIS
+        CHANNEL_LAYERS = {
+            'default': {
+                'BACKEND': 'channels_redis.core.RedisChannelLayer',
+                'CONFIG': {
+                    "hosts": [('127.0.0.1', 6379)],
+                },
+            }, 
+        }
+
+        2. Tesing: run the server
+
+        System check identified no issues (0 silenced).
+        May 23, 2023 - 18:05:31
+        Django version 4.2, using settings 'config.settings'
+        Starting development server at http://127.0.0.1:8000/
+        Quit the server with CTRL-BREAK.
+
+        modified:   README.md
+
+        NOTE:
+
+        Successfully installed Redis :)
