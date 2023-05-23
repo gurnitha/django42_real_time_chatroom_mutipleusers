@@ -295,7 +295,7 @@ Project: F:\_ingafter65\CHATROOM
         2. Run the server to test it out
 
         (venv3942) hp@ING:~ python manage.py runserver
-        
+
         Watching for file changes with StatReloader
         Performing system checks...
 
@@ -310,3 +310,6 @@ Project: F:\_ingafter65\CHATROOM
 
         modified:   README.md
         modified:   config/settings.py
+
+
+## 5. DJANGO ADMIN
