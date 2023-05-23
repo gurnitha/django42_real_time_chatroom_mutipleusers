@@ -140,3 +140,7 @@ Project: F:\_ingafter65\CHATROOM
 
 ## 4. DATABASE
 
+
+#### 4.1 DATABASE - Install postgresql
+
+        PASS
