@@ -507,3 +507,6 @@ Project: F:\_ingafter65\CHATROOM
         NOTE:
 
         Successfully installed Redis :)
+
+
+## 7. DJANGO APP
