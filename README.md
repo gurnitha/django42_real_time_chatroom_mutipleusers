@@ -424,3 +424,33 @@ Project: F:\_ingafter65\CHATROOM
         (0 rows)
 
         modified:   README.md
+
+
+#### 5.3 DJANGO ADMIN - Create superuser and check the result
+
+        1. Create superuser
+
+        (venv3942) hp@ING:~ python manage.py createsuperuser
+        Username (leave blank to use 'hp'): admin
+        Email address: admin@admin.com
+        Password: (admin)
+        Password (again): (admin)
+        The password is too similar to the username.
+        This password is too short. It must contain at least 8 characters.
+        This password is too common.
+        Bypass password validation and create user anyway? [y/N]: y
+        Superuser created successfully.
+
+        2. Check the result
+
+        django42_real_time_chatroom_mutipleusers=# SELECT * FROM auth_user;
+         id | password | last_login | is_superuser | username | first_name | last_name | email | is_staff | is_active | date_joined
+        ----+----------+------------+--------------+----------+------------+-----------+-------+----------+-----------+-------------
+          1 |xxx       |            |t             | admin    |            |           | ....
+        (0 rows)
+
+        NOTE:
+
+        Superuser created successfully :)
+
+        modified:   README.md
