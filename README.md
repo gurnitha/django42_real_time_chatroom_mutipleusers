@@ -524,3 +524,10 @@ Project: F:\_ingafter65\CHATROOM
         new file:   app/personal/views.py
 
         modified:   README.md
+
+
+## 7.2 DJANGO APP - Register the app personal to the project (config)
+
+        modified:   README.md
+        modified:   app/personal/apps.py
+        modified:   config/settings.py
