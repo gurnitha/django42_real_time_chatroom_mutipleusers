@@ -454,3 +454,6 @@ Project: F:\_ingafter65\CHATROOM
         Superuser created successfully :)
 
         modified:   README.md
+
+
+## 6. REDIS
