@@ -60,4 +60,54 @@ Project: F:\_ingafter65\CHATROOM
         Successfully installed asgiref-3.6.0 django-4.2 sqlparse-0.4.4 tzdata-2023.3
 
 
+#### 3.2 CREATE DJANGO PROJECT - project's name 'config'
+
+        $ # 1. Create Django Project 'config'
+
+        (venv3942)
+        $ django-admin startproject config .
+
+        $ # 2. Check the result using tree command
+
+        (venv3942)
+        $ tree config/
+        config/
+        |-- __init__.py
+        |-- asgi.py
+        |-- settings.py
+        |-- urls.py
+        |-- wsgi.py
+
+        new file:   config/__init__.py
+        new file:   config/asgi.py
+        new file:   config/settings.py
+        new file:   config/urls.py
+        new file:   config/wsgi.py
+        new file:   manage.py
+        
+        NOTE:
+
+        Perintah ini: $ django-admin startproject config .
+        menghasilkan django proyek dibuat di dalam root 
+        folder 'django42_real_time_chatroom_mutipleusers'
+
+        TESTING:
+
+        $ # 3. Menajalankan proyek
+
+        (venv3942)
+        $ python manage.py runserver
+
+        $ # 4. Buka di browser
+        
+        http://127.0.0.1:8000/
+
+        HASIL:
+
+        View release notes for Django 4.2
+        The install worked successfully! Congratulations!
+        You are seeing this page because DEBUG=True is in your settings file and you have not configured any URLs.
+
+        modified:   .gitignore
+        modified:   README.md
 
