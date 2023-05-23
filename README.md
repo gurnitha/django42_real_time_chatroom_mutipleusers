@@ -190,3 +190,30 @@ Project: F:\_ingafter65\CHATROOM
         modified:   README.md
 
 
+#### 4.3 DATABASE - Create a new user with password and give all privileges
+
+
+        NOTE: Continueing the above process
+
+        6. Create a new user with password
+
+        postgres=# CREATE USER django WITH PASSWORD 'password';
+        CREATE ROLE
+
+        7. List the users in the db
+
+        postgres=# \du
+                                   List of roles
+         Role name |                         Attributes                         | Member of
+        -----------+------------------------------------------------------------+-----------
+         core      | Create DB                                                  | {}
+         django    |                                                            | {}
+         postgres  | Superuser, Create role, Create DB, Replication, Bypass RLS | {}
+         supercore | Create DB                                                  | {}
+
+        8. Give the new user (django) all the privileges
+
+        postgres=# GRANT ALL PRIVILEGES ON DATABASE django42_real_time_chatroom_mutipleusers to django;
+        GRANT
+
+        modified:   README.md
