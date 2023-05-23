@@ -47,3 +47,17 @@ Project: F:\_ingafter65\CHATROOM
 
 
 ## 3. CREATE DJANGO PROJECT
+
+
+#### 3.1 CREATE DJANGO PROJECT - Install Django version 4.2
+
+        $ # Install Django version 4.2
+
+        $ source venv3942/Scripts/activate
+        (venv3942)
+        $ pip install django==4.2
+        ...
+        Successfully installed asgiref-3.6.0 django-4.2 sqlparse-0.4.4 tzdata-2023.3
+
+
+
