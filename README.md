@@ -217,3 +217,35 @@ Project: F:\_ingafter65\CHATROOM
         GRANT
 
         modified:   README.md
+
+
+#### 4.4 DATABASE - Login as the new user
+
+        1. Login as the new user (django) of the 'django42_real_time_chatroom_mutipleusers' db
+
+        C:\Users\hp>psql django42_real_time_chatroom_mutipleusers django
+        Password for user django:(password)
+        psql (13.0, server 15.1)
+        WARNING: psql major version 13, server major version 15.
+                 Some psql features might not work.
+        WARNING: Console code page (437) differs from Windows code page (1252)
+                 8-bit characters might not work correctly. See psql reference
+                 page "Notes for Windows users" for details.
+        Type "help" for help.
+
+        django42_real_time_chatroom_mutipleusers=>
+
+        2. Check if it has any tables 
+
+        django42_real_time_chatroom_mutipleusers=> \dt
+
+        Did not find any relations.
+        django42_real_time_chatroom_mutipleusers=>
+
+        NOTE:
+
+        Successfully logged in 
+
+        :)
+
+        modified:   README.md
