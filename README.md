@@ -457,3 +457,27 @@ Project: F:\_ingafter65\CHATROOM
 
 
 ## 6. REDIS
+
+
+#### 6.1 REDIS - Install Memurai
+
+        1. Download Memurai
+
+        https://www.memurai.com/get-memurai
+
+        2. Install Memurai
+
+        C:\Program Files\Memurai\
+
+        Port: 6379
+
+        3. After installation
+
+        Open Task Manager > Services > Check for Memurai ...
+
+        DONE :)
+
+        modified:   README.md
+
+
+
