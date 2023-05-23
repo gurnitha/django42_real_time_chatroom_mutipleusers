@@ -270,3 +270,43 @@ Project: F:\_ingafter65\CHATROOM
         (venv3942) hp@ING:~ pip freeze > requirements.txt
 
         modified:   README.md
+
+
+#### 4.6 DATABASE Configure the db to use it for the project - Update db in settings.py
+
+        1. Update settings.py
+
+        # New db
+        DB_NAME = "django42_real_time_chatroom_mutipleusers"
+        DB_USER = "django"
+        DB_PASSWORD = "password"
+
+        DATABASES = {
+            'default': {
+                'ENGINE': 'django.db.backends.postgresql_psycopg2',
+                'NAME': DB_NAME,
+                'USER': DB_USER,
+                'PASSWORD': DB_PASSWORD,
+                'HOST': 'localhost',
+                'PORT': '5432'
+            }
+        }
+
+        2. Run the server to test it out
+
+        (venv3942) hp@ING:~ python manage.py runserver
+        
+        Watching for file changes with StatReloader
+        Performing system checks...
+
+        System check identified no issues (0 silenced).
+
+        You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+        Run 'python manage.py migrate' to apply them.
+        May 23, 2023 - 15:56:29
+        Django version 4.2, using settings 'config.settings'
+        Starting development server at http://127.0.0.1:8000/
+        Quit the server with CTRL-BREAK.
+
+        modified:   README.md
+        modified:   config/settings.py
