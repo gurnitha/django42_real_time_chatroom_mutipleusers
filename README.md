@@ -548,3 +548,10 @@ Project: F:\_ingafter65\CHATROOM
         NOTE:
 
         Successfully displayed Hello World :)
+
+
+## 8.2 DJANGO TEMPLATES - Create base template & make template inheritance
+
+        modified:   README.md
+        modified:   templates/app/personal/index.html
+        new file:   templates/base.html
