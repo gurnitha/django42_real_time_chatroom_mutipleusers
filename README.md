@@ -11,3 +11,38 @@ Project: F:\_ingafter65\CHATROOM
 
 
 ## 2. SETUP
+
+
+#### 2.1 SETUP - Create virtual environment
+	
+		1. Check versions
+
+        $ python --version
+        Python 3.9.5
+        $ pip --version
+        pip 23.1.2
+        $ virtualenv --version
+        virtualenv 20.7.2 
+
+        2. Create virtual environment
+
+        $ python -m venv venv3942
+
+        3. Results
+
+        modified:   README.md
+        new file:   venv3942/Scripts/Activate.ps1
+        new file:   venv3942/Scripts/activate
+        new file:   venv3942/Scripts/activate.bat
+        new file:   venv3942/Scripts/deactivate.bat
+        new file:   venv3942/Scripts/pip.exe
+        new file:   venv3942/Scripts/pip3.9.exe
+        new file:   venv3942/Scripts/pip3.exe
+        new file:   venv3942/Scripts/python.exe
+        new file:   venv3942/Scripts/pythonw.exe
+        new file:   venv3942/pyvenv.cfg
+
+        modified:   .gitignore
+        modified:   README.md
+
+
