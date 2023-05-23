@@ -531,3 +531,6 @@ Project: F:\_ingafter65\CHATROOM
         modified:   README.md
         modified:   app/personal/apps.py
         modified:   config/settings.py
+
+
+## 8. DJANGO TEMPLATES
