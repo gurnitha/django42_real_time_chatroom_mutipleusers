@@ -563,3 +563,23 @@ Project: F:\_ingafter65\CHATROOM
         modified:   templates/base.html
         new file:   templates/snippets/footer.html
         new file:   templates/snippets/header.html
+
+
+## 8.4 DJANGO TEMPLATES - Create home view
+
+        renamed:    templates/app/personal/index.html -> app/personal/templates/personal/home.html
+        modified:   app/personal/urls.py
+        modified:   app/personal/views.py
+        modified:   config/settings.py
+        modified:   config/urls.py
+        modified:   templates/base.html
+        new file:   templates/snippets/base_css.html
+        new file:   templates/snippets/base_js.html
+        modified:   templates/snippets/footer.html
+        modified:   templates/snippets/header.html
+
+        NOTE:
+
+        1. Re-arranged the codes to meet the source
+        2. Home view successfulle created :)
+
