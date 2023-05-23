@@ -583,3 +583,10 @@ Project: F:\_ingafter65\CHATROOM
         1. Re-arranged the codes to meet the source
         2. Home view successfulle created :)
 
+
+## 8.5 DJANGO TEMPLATES - Added some snippets to header
+
+        modified:   .gitignore
+        modified:   config/settings.py
+        modified:   templates/base.html
+        modified:   templates/snippets/header.html
