@@ -8,3 +8,6 @@ Project: F:\_ingafter65\CHATROOM
 
 
 ## [1. GITHUB-Create Github repo](https://github.com/gurnitha/django42_real_time_chatroom_mutipleusers)
+
+
+## 2. SETUP
