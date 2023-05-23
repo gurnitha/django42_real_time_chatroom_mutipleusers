@@ -534,3 +534,17 @@ Project: F:\_ingafter65\CHATROOM
 
 
 ## 8. DJANGO TEMPLATES
+
+
+## 8.1 DJANGO TEMPLATES - Hellow world with view, urls and templates
+
+        modified:   README.md
+        new file:   app/personal/urls.py
+        modified:   app/personal/views.py
+        modified:   config/settings.py
+        modified:   config/urls.py
+        new file:   templates/app/personal/index.html
+
+        NOTE:
+
+        Successfully displayed Hello World :)
