@@ -555,3 +555,11 @@ Project: F:\_ingafter65\CHATROOM
         modified:   README.md
         modified:   templates/app/personal/index.html
         new file:   templates/base.html
+
+
+## 8.3 DJANGO TEMPLATES - Include snippets
+
+        modified:   README.md
+        modified:   templates/base.html
+        new file:   templates/snippets/footer.html
+        new file:   templates/snippets/header.html

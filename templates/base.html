@@ -4,11 +4,32 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>{% block title %} {{ block.super} }{% endblock title %}| CHAT ROOM</title>
+	<style type="text/css">
+		.main{
+			color:#141920;
+		}
+		.header {
+			color:#F2277C;
+		}
+		.footer {
+			color:#141920;
+		}
+	</style>
 </head>
 <body>	
 
-	{% block content %}
-	{% endblock content %}
+	<!-- Header -->
+	{% include 'snippets/header.html' %}
+
+	<!-- Content -->
+	<div class="main">
+		{% block content %}
+
+		{% endblock content %}
+	</div>
+
+	<!-- Footer -->
+	{% include 'snippets/header.html' %}
 
 </body>
 </html>
