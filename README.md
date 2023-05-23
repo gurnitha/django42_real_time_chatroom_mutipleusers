@@ -111,3 +111,30 @@ Project: F:\_ingafter65\CHATROOM
         modified:   .gitignore
         modified:   README.md
 
+
+#### 3.3 CREATE DJANGO PROJECT - Create requirements.txt file
+
+        1. Check the installed library in venv3942
+
+        (venv3942) hp@ING:~ pip list
+
+        Package    Version
+        ---------- -------
+        asgiref    3.6.0
+        Django     4.2
+        pip        21.1.1
+        setuptools 56.0.0
+        sqlparse   0.4.4
+        
+        2. Create requirements.txt file
+
+        (venv3942) hp@ING:~ pip freeze > requirements.txt
+
+        !!! NOTE:
+
+        venv3942 MUST BE reside inside the root folder
+
+        modified:   README.md
+        new file:   requirements.txt
+
+
