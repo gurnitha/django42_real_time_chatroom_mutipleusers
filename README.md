@@ -249,3 +249,24 @@ Project: F:\_ingafter65\CHATROOM
         :)
 
         modified:   README.md
+
+
+#### 4.5 DATABASE Configure the db to use it for the project - Install psycopg2
+
+        1. Install psycopg2
+
+        (venv3942) hp@ING:~ pip install psycopg2
+        Collecting psycopg2
+        ...
+
+        2. Upgrade pip
+
+        (venv3942) hp@ING:~ python.exe -m pip install --upgrade pip
+        ...
+        Successfully installed pip-23.1.2
+
+        3. Add installed library to requirements.txt file
+
+        (venv3942) hp@ING:~ pip freeze > requirements.txt
+
+        modified:   README.md
