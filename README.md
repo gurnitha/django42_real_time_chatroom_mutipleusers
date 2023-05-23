@@ -313,3 +313,69 @@ Project: F:\_ingafter65\CHATROOM
 
 
 ## 5. DJANGO ADMIN
+
+
+#### 5.1 DJANGO ADMIN - Activate django admin
+
+        1. Jalankan migrasi
+
+        (venv3942) hp@ING:~ python manage.py makemigrations
+        No changes detected
+
+        (venv3942) hp@ING:~ python manage.py migrate
+
+        Unable to create the django_migrations table (permission denied for schema public
+        LINE 1: CREATE TABLE "django_migrations" ("id" bigint NOT NULL PRIMA...
+                             ^
+        )
+
+        NOTE:
+
+        Could not create tables
+
+        ASSESMENTS:
+
+        1. GRANT ALL PRIVILEGES ON DATABASE still does not allow the new user 'django' create tables
+
+        postgres=# GRANT ALL PRIVILEGES ON DATABASE django42_real_time_chatroom_mutipleusers to django;
+        GRANT
+
+        SOLUTION:
+
+        1. Run postgres admin server
+        2. Find Login/Group Roles > properties > 
+           in new window clik > superuser
+
+        3. Re-run the migrations
+
+        (venv3942) hp@ING:~ python manage.py makemigrations
+        No changes detected
+
+        (venv3942) hp@ING:~ python manage.py migrate
+        Operations to perform:
+          Apply all migrations: admin, auth, contenttypes, sessions
+        Running migrations:
+          Applying contenttypes.0001_initial... OK
+          Applying auth.0001_initial... OK
+          Applying admin.0001_initial... OK
+          Applying admin.0002_logentry_remove_auto_add... OK
+          Applying admin.0003_logentry_add_action_flag_choices... OK
+          Applying contenttypes.0002_remove_content_type_name... OK
+          Applying auth.0002_alter_permission_name_max_length... OK
+          Applying auth.0003_alter_user_email_max_length... OK
+          Applying auth.0004_alter_user_username_opts... OK
+          Applying auth.0005_alter_user_last_login_null... OK
+          Applying auth.0006_require_contenttypes_0002... OK
+          Applying auth.0007_alter_validators_add_error_messages... OK
+          Applying auth.0008_alter_user_username_max_length... OK
+          Applying auth.0009_alter_user_last_name_max_length... OK
+          Applying auth.0010_alter_group_name_max_length... OK
+          Applying auth.0011_update_proxy_permissions... OK
+          Applying auth.0012_alter_user_first_name_max_length... OK
+          Applying sessions.0001_initial... OK
+
+        NOTE:
+
+        Successfully created tables
+
+        modified:   README.md
