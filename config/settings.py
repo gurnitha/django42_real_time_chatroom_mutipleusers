@@ -34,6 +34,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
 
     # My Apps
+    'app.account.apps.AccountConfig',
     'app.personal.apps.PersonalConfig',
 
     # Third Party Apps

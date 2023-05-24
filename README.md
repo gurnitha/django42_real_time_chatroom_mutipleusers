@@ -631,3 +631,14 @@ Project: F:\_ingafter65\CHATROOM
         new file:   app/account/models.py
         new file:   app/account/tests.py
         new file:   app/account/views.py
+
+
+#### 9.2 USER MANAGEMENT - Register the account app to settings.py
+
+        modified:   README.md
+        modified:   app/account/apps.py
+        modified:   config/settings.py
+
+        NOTE:
+
+        Successfully registered account app :)
