@@ -642,3 +642,17 @@ Project: F:\_ingafter65\CHATROOM
         NOTE:
 
         Successfully registered account app :)
+
+
+#### 9.3 USER MANAGEMENT - Creating custom user model named 'Account' based on the AbstractBaseUser
+
+        modified:   app/account/models.py
+        modified:   requirements.txt
+
+        NOTE:
+
+        (venv3942) hp@ING:~ pip install pillow
+        ...
+        Successfully installed pillow-9.5.0
+
+        (venv3942) hp@ING:~ pip freeze > requirements.txt
