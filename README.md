@@ -619,3 +619,15 @@ Project: F:\_ingafter65\CHATROOM
 
 
 ## 9. USER MANAGEMENT
+
+
+#### 9.1 USER MANAGEMENT - Create account app inside app folder
+
+        modified:   README.md
+        new file:   app/account/__init__.py
+        new file:   app/account/admin.py
+        new file:   app/account/apps.py
+        new file:   app/account/migrations/__init__.py
+        new file:   app/account/models.py
+        new file:   app/account/tests.py
+        new file:   app/account/views.py
