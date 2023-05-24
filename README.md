@@ -959,3 +959,17 @@ Project: F:\_ingafter65\CHATROOM
 
         2. But image of the logged in user did not showing in header of the home page
 
+
+
+#### 9.10 USER MANAGEMENT - Showing user loggein image to header menu
+
+        modified:   README.md
+        new file:   media_cdn/profile_images/1/profile_image.png
+        modified:   templates/snippets/header.html
+
+        :)
+
+        NOTE:
+
+        Could not change the default image
+
