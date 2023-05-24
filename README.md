@@ -981,3 +981,9 @@ Project: F:\_ingafter65\CHATROOM
 
         modified:   README.md
         new file:   app/account/templates/account/register.html
+
+
+#### 10.2 REGISTRATION - Create RegistrationForm form model
+
+        modified:   README.md
+        new file:   app/account/forms.py
