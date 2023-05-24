@@ -973,3 +973,5 @@ Project: F:\_ingafter65\CHATROOM
 
         Could not change the default image
 
+
+## 10. REGISTRATION
