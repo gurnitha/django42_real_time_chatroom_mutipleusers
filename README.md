@@ -606,3 +606,13 @@ Project: F:\_ingafter65\CHATROOM
         NOTE:
 
         It works :)
+
+
+## 8.7 DJANGO TEMPLATES - Defining home page with small screen
+
+        modified:   README.md
+        modified:   templates/snippets/header.html
+
+        NOTE:
+
+        It works :)
