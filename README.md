@@ -656,3 +656,166 @@ Project: F:\_ingafter65\CHATROOM
         Successfully installed pillow-9.5.0
 
         (venv3942) hp@ING:~ pip freeze > requirements.txt
+
+        <!-- The custom user model called Account -->
+
+        def get_profile_image_filepath(self, filename):
+
+        """Defining image path for each user"""
+        return 'profile_images/' + str(self.pk) + '/profile_image.png'
+
+        def get_default_profile_image():
+                """Defining default image path in case user has no image"""
+                return "images/logo_1080_1080.png"
+
+
+        # MODEL:Account
+        class Account(AbstractBaseUser):
+                """Defining user management in the system"""
+
+                """Defining user creaentials"""
+                email                   = models.EmailField(verbose_name="email", max_length=60, unique=True)
+                username                = models.CharField(max_length=30, unique=True)
+                date_joined             = models.DateTimeField(verbose_name='date joined', auto_now_add=True)
+                last_login              = models.DateTimeField(verbose_name='last login', auto_now=True)
+                is_admin                = models.BooleanField(default=False)
+                is_active               = models.BooleanField(default=True)
+                is_staff                = models.BooleanField(default=False)
+                is_superuser    = models.BooleanField(default=False)
+                profile_image   = models.ImageField(max_length=255, 
+                                                        upload_to=get_profile_image_filepath, 
+                                                        null=True, 
+                                                        blank=True, 
+                                                        default=get_default_profile_image)
+                # Hiding the user's email from other users
+                hide_email              = models.BooleanField(default=True)
+
+                # Email and Username are required to create account
+                # User must use its email to login
+                USERNAME_FIELD = 'email' # Refer to email in line 26
+                REQUIRED_FIELDS = ['username'] # Refer to username in line 27
+
+                objects = MyAccountManager()
+                
+                def __str__(self):
+                        return self.username
+
+                # Get profile image of the user from the:get_profile_image_filepath
+                def get_profile_image_filename(self):
+                        return str(self.profile_image)[str(self.profile_image).index('profile_images/' + str(self.pk) + "/"):]
+
+                # For checking permissions. to keep it simple all admin have ALL permissons
+                def has_perm(self, perm, obj=None):
+                        return self.is_admin
+
+                # Does this user have permission to view this app? (ALWAYS YES FOR SIMPLICITY)
+                def has_module_perms(self, app_label):
+                        return True
+
+
+#### 9.4 USER MANAGEMENT - Creating custom user manager model named 'MyAccountManager' based on the BaseUserManager
+
+
+        <!-- The custom user manager model called MyAccountManager -->
+
+        1. Create MyAccountManager
+
+        class MyAccountManager(BaseUserManager):
+
+        def create_user(self, email, username, password=None):
+                if not email:
+                        raise ValueError('Users must have an email address.')
+                if not username:
+                        raise ValueError('Users must have a username.')
+
+                user = self.model(
+                        email=self.normalize_email(email),
+                        username=username,
+                )
+
+                user.set_password(password)
+                user.save(using=self._db)
+                return user
+
+        def create_superuser(self, email, username, password):
+                user = self.create_user(
+                        email=self.normalize_email(email),
+                        password=password,
+                        username=username,
+                )
+                user.is_admin = True
+                user.is_staff = True
+                user.is_superuser = True
+                user.save(using=self._db)
+                return user
+
+        2. Run migrations
+
+        (venv3942) hp@ING:~ python manage.py makemigrations
+        Migrations for 'account':
+          app\account\migrations\0001_initial.py
+            - Create model Account
+
+        (venv3942) hp@ING:~ python manage.py migrate
+        Operations to perform:
+          Apply all migrations: account, admin, auth, contenttypes, sessions
+        Running migrations:
+          Applying account.0001_initial... OK
+
+        3. Check the result
+
+        (venv3942) hp@ING:~ python manage.py dbshell
+        psql (13.0, server 15.1)
+        WARNING: psql major version 13, server major version 15.
+                 Some psql features might not work.
+        WARNING: Console code page (437) differs from Windows code page (1252)
+                 8-bit characters might not work correctly. See psql reference
+                 page "Notes for Windows users" for details.
+        Type "help" for help.
+
+        django42_real_time_chatroom_mutipleusers=# \dt
+                          List of relations
+         Schema |            Name            | Type  | Owner
+        --------+----------------------------+-------+--------
+         public | account_account            | table | django <<-- new table 
+         public | auth_group                 | table | django
+         public | auth_group_permissions     | table | django
+         public | auth_permission            | table | django
+         public | auth_user                  | table | django
+         public | auth_user_groups           | table | django
+         public | auth_user_user_permissions | table | django
+         public | django_admin_log           | table | django
+         public | django_content_type        | table | django
+         public | django_migrations          | table | django
+         public | django_session             | table | django
+        (11 rows)
+
+
+        django42_real_time_chatroom_mutipleusers=# \dt account_account;
+                     List of relations
+         Schema |      Name       | Type  | Owner
+        --------+-----------------+-------+--------
+         public | account_account | table | django
+        (1 row)
+
+
+        django42_real_time_chatroom_mutipleusers=# SELECT * FROM account_account;
+         id | password | email | username | date_joined | last_login | is_admin | is_active | is_staff | is_superuser | profile_image | hide_email
+        ----+----------+-------+----------+-------------+------------+----------+-----------+----------+--------------+---------------+------------
+        (0 rows)
+
+
+        django42_real_time_chatroom_mutipleusers=# SELECT * FROM auth_user;
+         id | password | last_login | is_superuser | username | first_name | last_name | email | is_staff | is_active | date_joined
+        ----+----------+------------+--------------+----------+------------+-----------+-------+----------+-----------+-------------
+          1 |xxx       |            |t             | admin    |            |           | ....
+        (0 rows)
+
+
+        modified:   README.md
+        new file:   app/account/migrations/0001_initial.py
+        modified:   app/account/models.py
+
+        NOTE:
+
+        account_acout table created successfully :)
