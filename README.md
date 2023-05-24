@@ -590,3 +590,19 @@ Project: F:\_ingafter65\CHATROOM
         modified:   config/settings.py
         modified:   templates/base.html
         modified:   templates/snippets/header.html
+
+
+## 8.6 DJANGO TEMPLATES - Defining home page with large screen
+
+        modified:   README.md
+        modified:   app/personal/urls.py
+        modified:   config/settings.py
+        modified:   config/urls.py
+        modified:   templates/base.html
+        modified:   templates/snippets/footer.html
+        modified:   templates/snippets/header.html
+        new file:   templates/snippets/header_ori.html
+
+        NOTE:
+
+        It works :)

@@ -1,0 +1,91 @@
+{% load static %}
+{% block content %}
+
+<style type="text/css">
+	@media (min-width: 768px) {
+	  html {
+	    font-size: 16px;
+	  }
+	}
+
+	.search-bar{
+		max-width: 500px;
+		width: 100%;
+	}
+
+	form{
+		width: 100%;
+	}
+
+</style>
+
+<!-- Header -->
+<div class="d-flex p-3 px-md-4 mb-4 bg-white border-bottom shadow-sm">
+
+	<!-- LARGE SCREENS -->
+	<div class="d-none d-lg-flex flex-row my-auto flex-grow-1 align-items-center">
+		<h5 class="mr-3 font-weight-normal justify-content-start">
+			{% if request.user.is_authenticated %}
+				<a class="p-2 text-dark" href="#">show pic</a>
+			{% endif %}
+		</h5>
+		<form class="search-bar justify-content-start" onsubmit="return executeQuery();">
+	  		<input type="text" class="form-control" name="q" id="id_q" placeholder="Search...">
+	  	</form>
+
+	  	<div class="d-flex flex-row-reverse flex-grow-1">
+			<nav class="">
+				{% if request.user.is_authenticated %}
+					<a class="p-2 text-dark" href="">Home</a>
+					<a class="p-2 text-dark" href="">Logout</a>
+				{% else %}
+					<a class="p-2 text-dark" href="">Home</a>
+					<a class="p-2 text-dark" href="">Login</a>
+					<a class="btn btn-outline-primary" href="">Register</a>
+				{% endif %}	
+			</nav>
+	  	</div>
+	</div>
+	<!-- END LARGE SCREENS -->
+
+	<!-- SMALL SCREENS -->
+	<div class="d-flex d-lg-none flex-column my-auto align-items-center">
+		<h5 class="mr-3 font-weight-normal">
+		{% if request.user.is_authenticated %}
+		<a class="p-2 text-dark" href="">show pic</a>
+		{% endif %}
+		</h5>
+		<form class="search-bar flex-grow-1" onsubmit="return executeQuery();">
+		<input type="text" class="form-control" name="q" id="id_q" placeholder="Search...">
+		</form>
+		<div class="flex-grow-1">
+			<nav class="">
+				{% if request.user.is_authenticated %}
+					<a class="p-2 text-dark" href="">Home</a>
+					<a class="p-2 text-dark" href="">Logout</a>
+				{% else %}
+					<a class="p-2 text-dark" href="">Home</a>
+					<a class="p-2 text-dark" href="">Login</a>
+					<a class="btn btn-outline-primary" href="">Register</a>
+				{% endif %}	
+			</nav>
+	  	</div>
+	</div>
+	<!-- END SMALL SCREENS -->
+</div>
+
+<script type="text/javascript">
+	document.getElementById("id_q").value = "{{query}}"
+</script>
+<script>
+function executeQuery() {
+    var query = document.getElementById('id_q').value;
+    window.location.replace("{{BASE_URL}}/?q=" + query)
+    // "https://open-api.xyz/?q=" + query;
+    return false
+}
+
+</script>
+<!-- End Header -->
+
+{% endblock content %}
