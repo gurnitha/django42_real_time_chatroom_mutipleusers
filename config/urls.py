@@ -13,6 +13,9 @@ from django.urls import path, include
 
 urlpatterns = [
     
+    # account
+    path('', include('app.account.urls', namespace='account')),
+    
     # personal
     path('', include('app.personal.urls', namespace='personal')),
 

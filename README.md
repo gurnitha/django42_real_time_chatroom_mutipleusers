@@ -993,3 +993,15 @@ Project: F:\_ingafter65\CHATROOM
 
         modified:   README.md
         modified:   app/account/views.py
+
+
+#### 10.4 REGISTRATION - Create path and link
+
+        modified:   app/account/templates/account/register.html <<-- add link
+        new file:   app/account/urls.py <<-- create path
+        modified:   config/urls.py <<-- add path
+        modified:   templates/snippets/header.html <<-- fixing image link source
+
+        NOTE:
+
+        Successfully register a new user :)
