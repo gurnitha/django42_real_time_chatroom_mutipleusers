@@ -28,6 +28,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# NEW
+AUTH_USER_MODEL = 'account.Account'
 
 # Application definition
 

@@ -861,4 +861,40 @@ Project: F:\_ingafter65\CHATROOM
         1. Due to using custom user, we must drop the db in order to use accout_account table 
 
         2. Successfully drop and re-create db and superuser :)
-.
+
+
+#### 9.6 USER MANAGEMENT - Setting up AUTH_USER_MODELS in settings.py
+
+        modified:   README.md
+        modified:   config/settings.py
+
+
+#### 9.10 USER MANAGEMENT - Activating the admin app
+
+        1. Run migrations
+
+        (venv3942) hp@ING:~ python manage.py makemigrations
+        No changes detected
+
+        (venv3942) hp@ING:~ python manage.py migrate
+        ...
+          Applying admin.0001_initial... OK
+
+        2. Re-create superusre
+
+        (venv3942) hp@ING:~ python manage.py createsuperuser
+        Username (leave blank to use 'hp'): admin
+        Email address: inyoman_gurnxxxx@yahoo.com
+        Password: admin
+        Password (again): admin
+        The password is too similar to the username.
+        This password is too short. It must contain at least 8 characters.
+        This password is too common.
+        Bypass password validation and create user anyway? [y/N]: y
+        Superuser created successfully.
+
+        6. Testing: run the server
+
+        (venv3942) hp@ING:~ python manage.py runserver
+        ...
+        Starting development server at http://127.0.0.1:8000/
