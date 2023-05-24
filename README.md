@@ -819,3 +819,46 @@ Project: F:\_ingafter65\CHATROOM
         NOTE:
 
         account_acout table created successfully :)
+
+
+#### 9.5 USER MANAGEMENT - Drop and Recreate database
+
+
+        NOTE:
+
+        1. Login 
+
+        C:\Users\hp>psql postgres postgres
+        Password for user postgres: (admin)
+        psql (13.0, server 15.1)
+        WARNING: psql major version 13, server major version 15.
+                 Some psql features might not work.
+        WARNING: Console code page (437) differs from Windows code page (1252)
+                 8-bit characters might not work correctly. See psql reference
+                 page "Notes for Windows users" for details.
+        Type "help" for help.
+
+        postgres=# \l
+
+        ...
+
+        django42_real_time_chatroom_mutipleusers
+
+        2. Drop db
+
+        postgres=# DROP DATABASE django42_real_time_chatroom_mutipleusers;
+        DROP DATABASE
+
+        3. Re-create the db
+
+        postgres=# CREATE DATABASE django42_real_time_chatroom_mutipleusers;
+        CREATE DATABASE
+        
+        modified:   README.md
+
+        NOTE:
+
+        1. Due to using custom user, we must drop the db in order to use accout_account table 
+
+        2. Successfully drop and re-create db and superuser :)
+.
