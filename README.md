@@ -894,7 +894,7 @@ Project: F:\_ingafter65\CHATROOM
         ...
         Superuser created successfully.
 
-        
+
         NOTE:
 
         1. Make sure AUTH_USER_MODEL is correctly setup like this:
@@ -914,3 +914,22 @@ Project: F:\_ingafter65\CHATROOM
 
         modified:   README.md
         new file:   app/account/migrations/0001_initial.py
+
+
+#### 9.8 USER MANAGEMENT - Registering Account model to admin.py
+
+        1. Defining the look of the Account table in admin panel
+
+        modified:   app/account/admin.py
+        new file:   media/images/logo_1080_1080.png
+        new file:   media_cdn/images/logo_1080_1080.png
+        modified:   README.md
+
+        NOTE:
+
+        1. Successfully defining the look of the Account table in admin panel
+
+        2. But the email field is still CASE SENSITIVE. Due to it,
+           the same user email, like: inyoman_Gurnixxx@yahoo.com could not
+           use for login.
+        3. User can login if user use the email like this: inyoman_gurnixxx@yahoo.com
