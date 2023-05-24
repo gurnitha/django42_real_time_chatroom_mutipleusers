@@ -987,3 +987,9 @@ Project: F:\_ingafter65\CHATROOM
 
         modified:   README.md
         new file:   app/account/forms.py
+
+
+#### 10.3 REGISTRATION - Create register_view view
+
+        modified:   README.md
+        modified:   app/account/views.py
