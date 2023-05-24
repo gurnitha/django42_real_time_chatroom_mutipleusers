@@ -30,6 +30,10 @@ ALLOWED_HOSTS = []
 
 # NEW
 AUTH_USER_MODEL = 'account.Account'
+AUTHENTICATION_BACKENDS = ( 
+    'django.contrib.auth.backends.AllowAllUsersModelBackend', 
+    'app.account.backends.CaseInsensitiveModelBackend', # It refers to: app/account/backends/CaseInsensitiveModelBackend
+)
 
 # Application definition
 

@@ -933,3 +933,29 @@ Project: F:\_ingafter65\CHATROOM
            the same user email, like: inyoman_Gurnixxx@yahoo.com could not
            use for login.
         3. User can login if user use the email like this: inyoman_gurnixxx@yahoo.com
+
+
+#### 9.9 USER MANAGEMENT - Making CASE INSENSITIVE to email for login
+
+        modified:   README.md
+
+        1. Creating CaseInsensitiveModelBackend model
+        new file:   app/account/backends.py
+
+        2. Add it to settings.py
+        modified:   config/settings.py
+
+        NOTE:
+
+        1. User now can login using either: 
+
+           inyoman_gurnixxx@yahoo.com
+
+           OR
+
+           inyoman_Gurnixxx@yahoo.com
+
+           :)
+
+        2. But image of the logged in user did not showing in header of the home page
+
