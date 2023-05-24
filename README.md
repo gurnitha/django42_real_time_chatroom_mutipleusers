@@ -860,7 +860,7 @@ Project: F:\_ingafter65\CHATROOM
 
         1. Due to using custom user, we must drop the db in order to use accout_account table 
 
-        2. Successfully drop and re-create db and superuser :)
+        2. Successfully drop and re-create db :)
 
 
 #### 9.6 USER MANAGEMENT - Setting up AUTH_USER_MODELS in settings.py
@@ -869,32 +869,48 @@ Project: F:\_ingafter65\CHATROOM
         modified:   config/settings.py
 
 
-#### 9.10 USER MANAGEMENT - Activating the admin app
+#### 9.7 USER MANAGEMENT - Activating the admin app and create superuser
 
         1. Run migrations
 
         (venv3942) hp@ING:~ python manage.py makemigrations
-        No changes detected
+        Migrations for 'account':
+          app\account\migrations\0001_initial.py
+            - Create model Account
 
         (venv3942) hp@ING:~ python manage.py migrate
-        ...
-          Applying admin.0001_initial... OK
+        Operations to perform:
+          Apply all migrations: account, admin, auth, contenttypes, sessions
+        Running migrations:
+          No migrations to apply.
 
-        2. Re-create superusre
+        2. Create superuser
 
         (venv3942) hp@ING:~ python manage.py createsuperuser
-        Username (leave blank to use 'hp'): admin
-        Email address: inyoman_gurnxxxx@yahoo.com
+        Email: inyoman_gurnitha@yahoo.com
+        Username: admin
         Password: admin
         Password (again): admin
-        The password is too similar to the username.
-        This password is too short. It must contain at least 8 characters.
-        This password is too common.
-        Bypass password validation and create user anyway? [y/N]: y
+        ...
         Superuser created successfully.
 
-        6. Testing: run the server
+        
+        NOTE:
 
-        (venv3942) hp@ING:~ python manage.py runserver
-        ...
-        Starting development server at http://127.0.0.1:8000/
+        1. Make sure AUTH_USER_MODEL is correctly setup like this:
+
+        # NEW
+        AUTH_USER_MODEL = 'account.Account' # this is correct
+        AUTH_USER_MODEL = 'app.account.Account' # this is NOT correct
+        AUTH_USER_MODEL = 'app.account.models.Account' # this is NOT correct
+
+        2. If AUTH_USER_MODEL is setup correctly, 
+           you will still encounter this error:
+           ValueError: Dependency on app with no migrations: account
+
+        3. The above error means that you should run migrations the create superuser
+
+        4. Successfully re-create db and superuser :)
+
+        modified:   README.md
+        new file:   app/account/migrations/0001_initial.py
