@@ -975,3 +975,9 @@ Project: F:\_ingafter65\CHATROOM
 
 
 ## 10. REGISTRATION
+
+
+#### 10.1 REGISTRATION - Create register form template
+
+        modified:   README.md
+        new file:   app/account/templates/account/register.html
